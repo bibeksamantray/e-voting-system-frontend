@@ -1,13 +1,148 @@
-# React + Vite
+# 🗳️ E-Voting System — Frontend (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fast, and secure frontend for the E-Voting System.
+Built with **React + Vite**, this app provides separate interfaces for **admins** and **voters**, and communicates with the backend API.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+✔️ User authentication (register / login)
+✔️ Role-based dashboards (Admin / Voter)
+✔️ Create and manage elections (Admin)
+✔️ View election details
+✔️ Secure voting flow
+✔️ Protected routes
+✔️ API communication via Axios
+✔️ Environment-based configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# e-voting-system-backend" 
+---
+
+## ✅ Quick Start
+
+### Prerequisites
+
+* Node.js (14+)
+* npm or yarn
+
+### Install & Run
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Build & Preview
+
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+## ⚙️ Environment Variables
+
+Create `.env` or `.env.local` inside `frontend/`.
+
+> ⚠️ Vite requires variables to start with **VITE_**
+
+```
+VITE_API_URL=http://localhost:5000/api
+```
+
+The value is read inside:
+
+```
+src/api/axios.js
+```
+
+---
+
+## 🗂️ Project Structure
+
+```
+frontend/
+├─ package.json
+├─ index.html
+├─ vite.config.js
+├─ public/
+├─ src/
+│  ├─ main.jsx
+│  ├─ index.css
+│  ├─ App.jsx
+│  ├─ api/
+│  │  └─ axios.js
+│  ├─ assets/
+│  ├─ components/
+│  │  ├─ Navbar.jsx
+│  │  └─ ProtectedRoute.jsx
+│  ├─ context/
+│  │  └─ AuthContext.jsx
+│  ├─ pages/
+│  │  ├─ AdminDashboard.jsx
+│  │  ├─ CreateElectionPage.jsx
+│  │  ├─ ElectionDetailsPage.jsx
+│  │  ├─ ElectionsPage.jsx
+│  │  ├─ HomePage.jsx
+│  │  ├─ LoginPage.jsx
+│  │  ├─ NotFoundPage.jsx
+│  │  ├─ RegisterPage.jsx
+│  │  ├─ UpdateStatusPage.jsx
+│  │  ├─ VoterDashboard.jsx
+│  │  └─ welcome.jsx
+│  └─ router/
+│     └─ AppRouter.jsx
+└─ eslint.config.js
+```
+
+---
+
+## 🔧 Developer Notes
+
+* Auth state is handled in **AuthContext**
+* Tokens are typically persisted in `localStorage`
+* `ProtectedRoute.jsx` prevents unauthorized access
+* Ensure your backend is running and matches:
+
+```
+VITE_API_URL=http://localhost:5000/api
+```
+
+---
+
+## 🧰 Tech Stack
+
+* React
+* Vite
+* React Router
+* Context API
+* Axios
+* ESLint
+
+---
+
+## 📄 License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so.
+
+---
+
+## 🙌 Acknowledgements
+
+Thanks to the open-source community and reference docs from React + Vite.
+
+---
+
+## 👨‍💻 Author
+**Bibek Samantray**
+<br>AI / ML Enthusiast | Full-Stack Developer
+
+---
+
