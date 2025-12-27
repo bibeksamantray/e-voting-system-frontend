@@ -18,14 +18,22 @@ Built with **React + Vite**, this app provides separate interfaces for **admins*
 
 ---
 
-## ✅ Quick Start
-
 ### Prerequisites
 
 * Node.js (14+)
 * npm or yarn
 
-### Install & Run
+---
+
+## Quickstart (Windows)
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/bibeksamantray/e-voting-system-frontend.git
+```
+
+2. Install & Run
 
 ```bash
 cd frontend
